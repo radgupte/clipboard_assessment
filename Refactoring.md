@@ -9,3 +9,7 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+- There existed an unnecessary condition for the event parameter. It checked if the event parameter is defined when the event was certain to be undefined at that point in code.
+- Similarly, it is unnecessary to check if the candidate type is string if the value of partitionKey of event is undefined.
+- The refactored code uses a ternary operator for conditions, which reduces lines of code and makes the code easy to understand and well-structured. 
